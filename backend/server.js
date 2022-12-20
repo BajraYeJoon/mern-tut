@@ -1,5 +1,7 @@
 //initialize the server using express
 const express = require("express");
+const colors = require("colors");
+const { connectDB } = require("./config/db");
 
 //bring in error handler
 const { errHandler } = require("./middleware/errorMiddleware");
@@ -8,8 +10,11 @@ const { errHandler } = require("./middleware/errorMiddleware");
 const dotenv = require("dotenv").config();
 
 //specify the port using the process .env
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
+//method for connection of db
+
+connectDB();
 //make an app using the express server
 const app = express();
 
