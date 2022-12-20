@@ -3,7 +3,6 @@
 
 //async handler for custom error handling during db connecction
 const asyncHandler = require("express-async-handler");
-const { update } = require("../models/taskModel");
 
 //getting the model
 

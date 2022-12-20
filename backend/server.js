@@ -22,6 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 //middleware -use with the api endpoint and make a route folder with the routes that handles the crud
 app.use("/api/tasks", require("./routes/taskRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
 
 app.use(errHandler);
 
